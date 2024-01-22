@@ -1,4 +1,20 @@
-Building TeamLab yourself:
+# TeamLab
+
+A comprehensive system which provides:
+- user login for course coordinators 
+- overview of students data
+- course envrionemnt
+- online assessment for standardized prior-knowledge tests
+- user generated databank of prior-knowledge questions
+- chart visualisation of prior-knowledge test results
+- student classification on: knwoledge and motivation levels, preferred team role, academic background, nationality and gender
+- automatic grouping of students based on personalzied rules
+- unrestricted group editing
+- group export to CSV format
+- friendly website assitant with suggestions
+- manual and tutorials
+
+## Building TeamLab yourself:
 
 1. Install [JDK 8][4].
 2. Install [Python 2.7][5].
