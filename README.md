@@ -1,8 +1,4 @@
-# TeamLab
-
-A system for student assessment and efficiently engineering smart groups
-
-## Building TeamLab yourself
+Building TeamLab yourself:
 
 1. Install [JDK 8][4].
 2. Install [Python 2.7][5].
