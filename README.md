@@ -1,17 +1,6 @@
 # TeamLab
 
-a system for student assessment and efficiently engineering smart groups
-
-TeamLab is currently hosted at [uteamlab.me](http://uteamlab.me).
-
-## Running TeamLab
-
-1. Install [Docker][1].
-2. Download and run TeamLab's Docker image.
-```shell
-docker run -p 80:8080 clazaroaia/teamlab
-```
-TeamLab should now be accessible at `http://localhost/`. If that doesn't work, see [this page](https://docs.docker.com/get-started/part2/#run-the-app) for more information on running Docker containers.
+A system for student assessment and efficiently engineering smart groups
 
 ## Building TeamLab yourself
 
