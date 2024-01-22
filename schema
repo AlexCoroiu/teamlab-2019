@@ -1,0 +1,142 @@
+-- auto-generated definition
+create table questions
+(
+  text    TEXT not null,
+  choice1 TEXT,
+  choice2 TEXT,
+  choice3 TEXT,
+  choice4 TEXT,
+  answer  TEXT not null,
+  id      INTEGER
+    constraint questions_pk
+      primary key,
+  score   INTEGER,
+  type    TEXT,
+  choice5 TEXT,
+  choice6 TEXT
+);
+
+create table students
+(
+  email       TEXT    not null,
+  name        TEXT    not null,
+  gender      TEXT    not null,
+  nationality TEXT    not null,
+  belbin      TEXT    not null,
+  id          INTEGER not null
+    constraint students_pk
+      primary key
+);
+
+create table tags
+(
+  name TEXT not null
+    constraint tags_pk
+      primary key
+);
+
+create table tags_question
+(
+  tag      TEXT
+    constraint tag
+      references tags,
+  question INTEGER
+    constraint question
+      references questions,
+  constraint tags_question_pk
+    primary key (question, tag)
+);
+
+create table teachers
+(
+  email TEXT
+    constraint teachers_pk
+      primary key,
+  name  TEXT
+);
+
+create table tests
+(
+  id    INTEGER
+    constraint pk
+      primary key,
+  name  TEXT not null,
+  owner TEXT not null
+    constraint teacher
+      references teachers
+);
+
+create table courses
+(
+  id      INTEGER
+    constraint courses_pk
+      primary key,
+  name    TEXT not null,
+  test    INTEGER
+    constraint test
+      references tests,
+  owner   TEXT not null
+    constraint owner
+      references teachers,
+  rules   TEXT,
+  studies TEXT,
+  status  INTEGER
+);
+
+create table groups
+(
+  id          INTEGER
+    constraint groups_pk
+      primary key,
+  name        INTEGER not null,
+  grade       INTEGER,
+  performance INTEGER,
+  course      INTEGER not null
+    constraint course
+      references courses
+);
+
+create table progress
+(
+  student    INTEGER
+    constraint student
+      references students,
+  course     INTEGER
+    constraint course
+      references courses,
+  date       TEXT,
+  knowledge  INTEGER,
+  motivation INTEGER,
+  constraint progress_pk
+    primary key (student, course, date)
+);
+
+create table questions_test
+(
+  question  INTEGER
+    references questions,
+  test      INTEGER
+    references tests,
+  component TEXT,
+  constraint questions_test_pk
+    primary key (question, test)
+);
+
+create table students_course
+(
+  student    INTEGER
+    constraint student
+      references students,
+  course     INTEGER
+    constraint course
+      references courses,
+  motivation INTEGER not null,
+  knowledge  INTEGER not null,
+  study      TEXT    not null,
+  "group"    INTEGER
+    constraint "group"
+      references groups,
+  constraint students_course_pk
+    primary key (student, course)
+);
+

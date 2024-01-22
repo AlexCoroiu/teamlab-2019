@@ -1,0 +1,62 @@
+<!--
+  ~     TeamLab
+  ~     Copyright (C) 2019  Alexandra Coroiu, Ciprian Lăzăroaia
+  ~     a.coroiu@student.utwente.nl, c.lazaroaia@student.utwente.nl
+  ~
+  ~     This program is free software: you can redistribute it and/or modify
+  ~     it under the terms of the GNU Affero General Public License as published
+  ~     by the Free Software Foundation, either version 3 of the License, or
+  ~     (at your option) any later version.
+  ~
+  ~     This program is distributed in the hope that it will be useful,
+  ~     but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~     GNU Affero General Public License for more details.
+  ~
+  ~     You have received a copy of the GNU Affero General Public License
+  ~     along with this program.  Alternatively, see <http://www.gnu.org/licenses/>.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <title>Logged out</title>
+</head>
+<body>
+<div id="app">
+    <v-app id="inspire" dark>
+        
+            <v-content>
+                <v-container fill-height>
+                    <v-layout justify-center align-center column>
+                        <v-flex xs3>
+                            <v-img height="240pt" width="240pt" src="/res/logo_transparent.png"></v-img>
+                        </v-flex>
+                        <v-flex shrink
+                                class="display-1"
+                        >
+                            You are not logged in.
+                        </v-flex>
+                        <v-flex shrink
+                                class="display-1">
+                            <a href="./login"><v-btn color="primary" large class="display-1">Log in</v-btn></a>
+                        </v-flex>
+                    </v-layout>
+                </v-container>
+            </v-content>
+    </v-app>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app'
+    });
+</script>
+</body>
+</html>
