@@ -8,7 +8,7 @@ A comprehensive system which provides:
 - user generated databank of prior-knowledge questions
 - chart visualisation of prior-knowledge test results
 - student classification on: knwoledge and motivation levels, preferred team role, academic background, nationality and gender
-- automatic grouping of students based on personalzied rules
+- automatic grouping of students based on personalzied rules (based on https://groupeng.org/)
 - unrestricted group editing
 - group export to CSV format
 - friendly website assitant with suggestions
